@@ -1,0 +1,63 @@
+cdversion: '3'
+
+services:
+
+
+  db:
+
+    image: mariadb:latest
+
+    container_name: db
+
+    restart: always
+
+    environment:
+
+      MARIADB_USER: maria-test
+
+      MARIADB_PASSWORD: maria-test
+
+      MARIADB_ROOT_PASSWORD: maria-test
+
+      MARIADB_DATABASE: front-test
+
+    ports:
+
+      - "3306:3306"
+
+
+
+  front-test:
+
+    image: kirillinside/back-end:updated
+
+    container_name: front-test-container
+
+    restart: always
+
+    ports:
+
+      - "8008:8008"
+
+    depends_on:
+
+      - db
+
+    volumes:
+
+      - "logs:/logs/front-test/front-test-container/"
+
+    environment:
+
+      DB_CONNECTION_STRING: mariadb://db:3306/front-test
+
+
+volumes:
+
+  logs:
+
+    driver: local
+    driver_opts:
+      o: bind
+      type: none
+      device: './logs/'

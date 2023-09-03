@@ -1,0 +1,12 @@
+.home {
+  flex: 1 1 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.logout {
+  margin-bottom: 2rem;
+
+  display: flex;
+  justify-content: flex-end;
+}

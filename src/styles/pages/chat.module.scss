@@ -1,0 +1,43 @@
+.container {
+  flex: 1 0 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat {
+  padding: 20px;
+  flex-grow: 1;
+  margin: 20px 0 70px;
+  color: #fff;
+  border-radius: 4px;
+  background: rgba(0, 0, 0, 0.3);
+  //display: flex;
+  //flex-direction: column;
+  max-height: 500px;
+  height: 200px;
+  //height: 100%;
+}
+
+.chatPlaceholder {
+  flex: 1 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 40px;
+}
+
+.footer {
+  flex: 0 0;
+  display: flex;
+  align-items: flex-start;
+
+  .input {
+    margin-right: 20px;
+    flex: 1 1 80%;
+  }
+
+  .button {
+    flex: 0 1 20%;
+  }
+}

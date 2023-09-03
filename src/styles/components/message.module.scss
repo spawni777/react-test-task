@@ -1,0 +1,23 @@
+.message {
+  padding: 10px 20px;
+  margin: 10px 0;
+  align-self: flex-start;
+  background: rgba(255, 255, 255, 0.9);
+  color: #000;
+  border-radius: 14px;
+}
+
+.myMessage {
+  align-self: flex-end;
+}
+
+.login {
+  margin-bottom: 5px;
+  text-align: left;
+  font-size: 14px;
+}
+
+.text {
+  text-align: left;
+  font-size: 20px;
+}
